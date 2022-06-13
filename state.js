@@ -1,16 +1,20 @@
-// set state to an empty object
+
 const state = {};
 
-// initialize state, also used in test
 export function initialize() {
-    // What is the initial shape of state?
-    // For example:
-    // state.game = null;
-    // state.pastGames = [];
+    state.poll = null;
+    state.allData = [];
 }
-// call initialize
+
 initialize();
-// export state as primary (default) export
+
 export default state;
 
-// export dispatch functions that modify state
+export function newPoll(question, optionAInput, optionBInput) {
+    state.poll = {
+        question: question,
+        optionA: { name: optionAInput, total: 0 },
+        optionB: { name: optionBInput, total: 0 }
+    };
+    console.log(newPoll());
+}

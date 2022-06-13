@@ -19,8 +19,8 @@
     display: grid;
     grid-template-areas: 
     'pollQuestion'
-    'responseOne responseTwo'
-    'vote-one remove-one vote-two remove-two'
+    'optionA optionB'
+    'vote-A remove-A vote-B remove-B'
     ;
 }
 
@@ -28,28 +28,27 @@
     grid-area: pollQuestion;
 }
 
-#response-one {
-    grid-area: responseOne
+#option-a {
+    grid-area: optionA
 }
 
-#response-two {
-    grid-area: responseTwo;
+#option-b {
+    grid-area: optionB
 }
 
-.vote.one {
-    grid-area: vote-one;
+#vote-a {
+    grid-area: vote-a
 }
 
-.remove.one {
-    grid-area: remove-one;
+#remove-a {
+    grid-area: remove-a
 }
 
-.vote.two {
-    grid-area: vote-two;
+#vote-b {
+    grid-area: vote-b
 }
 
-.remove.two {
-    grid-area: remove-two;
+#remove-b {
+    grid-area: remove-b
 }
-
 
