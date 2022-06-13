@@ -1,1 +1,55 @@
 /* CSS for home page (index.html) */
+#start-poll {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#start-poll-button {
+    height: 3em;
+    width: 75%;
+}
+
+::placeholder {
+    text-align: center;
+}
+
+#poll-inputs {
+    display: grid;
+    grid-template-areas: 
+    'pollQuestion'
+    'responseOne responseTwo'
+    'vote-one remove-one vote-two remove-two'
+    ;
+}
+
+#poll-question {
+    grid-area: pollQuestion;
+}
+
+#response-one {
+    grid-area: responseOne
+}
+
+#response-two {
+    grid-area: responseTwo;
+}
+
+.vote.one {
+    grid-area: vote-one;
+}
+
+.remove.one {
+    grid-area: remove-one;
+}
+
+.vote.two {
+    grid-area: vote-two;
+}
+
+.remove.two {
+    grid-area: remove-two;
+}
+
+

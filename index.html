@@ -23,16 +23,14 @@
             <button id="start-poll-button">Start Poll</button>
         </section>
         <section id="poll-inputs">
-            <div id="user-inputs">
-                <input required pollQuestion="">
-                <input required responseOne="">
+                <input required name="pollQuestion" id="poll-question" placeholder="Your Question">
+                <input required name="responseOne" id="response-one" placeholder="Response">
+                <input required name="responseTwo" id="response-two" placeholder="Response">
                 <button class="vote one">+</button>
                 <button class="remove one">-</button>
-                <input required responseTwo="">
                 <button class="vote two">+</button>
                 <button class="remove two">-</button>
                 <button id="submit-data">Submit Data</button>
-            </div>
         </section>
         <section id="all-data">
             <div id="poll-display">
