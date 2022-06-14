@@ -18,3 +18,55 @@ main {
 ::placeholder {
     text-align: center;
 }
+
+.all-polls {
+    display: grid;
+    grid-gap: 6px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.hidden {
+    display: none;
+}
+
+.old-data-container {
+    border: 1px solid black;
+    display: grid;
+    grid-area: 
+    'poll-question'
+    'optionADisplay optionBDisplay'
+    'optionAvotes optionBvotes'
+}
+
+.poll-question {
+    grid-area: 'poll-question'
+}
+.option.A.display {
+    grid-area: 'optionADisplay';
+}
+
+.option.B.display {
+    grid-area: 'optionBDisplay';
+}
+
+.option.A.votes{
+    grid-area: 'optionAvotes';
+}
+
+.option.B.votes{
+    grid-area: 'optionBvotes';
+}
+#new-poll {
+    display: flex;
+    justify-content: center;
+}
+
+.data-container {
+    display: grid;
+    grid-area: 
+    'poll-question'
+    'optionADisplay optionBDisplay'
+    'optionAvotes optionBvotes';
+    justify-content: center;
+    text-align: center;
+}

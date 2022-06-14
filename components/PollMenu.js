@@ -10,7 +10,7 @@ export default function createPollMenu(root) {
 
         root.classList.remove('hidden');
         root.innerHTML = '';
-        const dataDisplay = DataDisplay({ poll });
+        const dataDisplay = DataDisplay(poll);
         root.append(dataDisplay);
     };
 }

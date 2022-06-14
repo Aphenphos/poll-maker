@@ -37,7 +37,7 @@ export function removes(option) {
     }
 }
 
-export function submit() {
-    state.data.push(state.poll);
+export function submit(poll) {
+    state.data.push(poll);
     state.poll = null;
 }

@@ -8,7 +8,6 @@ export default function createNewPoll(root, handlers){
 
         const formData = new FormData(form);
         handleNewPoll(formData.get('pollQuestion'), formData.get('optionA'), formData.get('optionB'));
-
         form.reset();
     });
 

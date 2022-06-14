@@ -1,9 +1,9 @@
-import createPollMenu from './PollMenu.js';
-import createNewPoll from './NewPoll.js';
-import createPolls from './polls.js';
-import trackVotes from './voteTracker.js';
+import createPollMenu from './components/PollMenu.js';
+import createNewPoll from './components/NewPoll.js';
+import createPolls from './components/polls.js';
+import trackVotes from './components/voteTracker.js';
 
-import state, { newPoll, votes, removes, submit } from './state.js';
+import state, { newPoll, votes, removes, submit } from './components/state.js';
 
 const PollMenu = createPollMenu(document.querySelector('#poll-menu'));
 
@@ -16,20 +16,20 @@ const voteTracker = trackVotes(document.querySelector('#poll-inputs'), {
         removes(option);
         display();
     },
-    handleSubmit: () => {
-        submit();
+    handleSubmitData: (poll) => {
+        submit(poll);
         display();
     }
 });
 
 const NewPoll = createNewPoll(document.querySelector('#new-poll'), {
-    handleNewPoll: (pollQuestion, optionAInput, optionBInput) => {
-        newPoll(pollQuestion, optionAInput, optionBInput);
+    handleNewPoll: (pollQuestion, optionA, optionB) => {
+        newPoll(pollQuestion, optionA, optionB);
         display();
     }
 });
 
-const Polls = createPolls(document.querySelector('.all-polls'));
+const Polls = createPolls(document.querySelector('#all-data'));
 
 function display() {
     PollMenu({ poll: state.poll });

@@ -1,8 +1,9 @@
+import state from "./state.js";
 export default function trackVotes(root, dispatch) {
     const handleVotes = dispatch.handleVotes;
     const handleRemoves = dispatch.handleRemoves;
     const handleSubmitData = dispatch.handleSubmitData;
-
+console.log(state)
 
     const [pollQuestionDisplay, optionADisplay, optionBDisplay] = root.querySelectorAll('span');
     const [voteA, removeA, voteB, removeB, submitData] = root.querySelectorAll('button');
@@ -20,19 +21,20 @@ export default function trackVotes(root, dispatch) {
         handleRemoves('B');
     });
     submitData.addEventListener('click', () => {
-        handleSubmitData(); 
+        handleSubmitData(state.poll); 
     });
 
     return (props) => {
         const poll = props.poll;
+        console.log(poll);
         if (!poll) {
             root.classList.add('hidden');
             return;
         }
-
+        console.log(pollQuestionDisplay);
         root.classList.remove('hidden');
-        pollQuestionDisplay.textContent = poll.question;
-        optionADisplay.textContent = poll.optionA;
-        optionBDisplay.textContent = poll.optionB;
+        pollQuestionDisplay.textContent = poll.pollQuestion;
+        optionADisplay.textContent = poll.optionA.name;
+        optionBDisplay.textContent = poll.optionB.name;
     };
 }
