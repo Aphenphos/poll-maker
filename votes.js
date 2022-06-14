@@ -22,4 +22,17 @@ export function trackVotes(root, dispatch) {
     submitData.addEventListener('click', () => {
         handleSubmitData(); 
     });
+
+    return (props) => {
+        const poll = props.poll;
+        if (!poll) {
+            root.classList.add('hidden');
+            return;
+        }
+
+        root.classList.remove('hidden');
+        pollQuestionDisplay.textContent = poll.question.name;
+        optionADisplay.textContent = poll.optionA.name;
+        optionBDisplay.textContent = poll.optionB.name;
+    };
 }
