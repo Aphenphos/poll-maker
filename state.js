@@ -11,10 +11,11 @@ initialize();
 
 export default state;
 
-export function newPoll(optionA, optionB) {
+export function newPoll(pollQuestion, optionAInput, optionBInput) {
     state.poll = {
-        aOption: { name: optionA, votes: 0 },
-        bOption: { name: optionB, votes: 0 }
+        pollQuestion: pollQuestion,
+        optionA: { name: optionAInput, votes: 0 },
+        optionB: { name: optionBInput, votes: 0 }
     };
 }
 
@@ -27,7 +28,7 @@ export function votes(option) {
     }
 }
 
-export function remove(option) {
+export function removes(option) {
     if (option === 'A') {
         state.poll.optionA.votes--;
     }

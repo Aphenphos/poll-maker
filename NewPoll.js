@@ -1,4 +1,4 @@
-export function createNewPoll(root, handlers){
+export default function createNewPoll(root, handlers){
     const handleNewPoll = handlers.handleNewPoll;
 
     const form = root.querySelector('form');
@@ -10,4 +10,15 @@ export function createNewPoll(root, handlers){
         handleNewPoll(formData.get('pollQuestion'), formData.get('optionA'), formData.get('optionB'));
 
         form.reset();
-    });}
+    });
+
+    return (props) => {
+        const poll = props.poll;
+
+        if (poll) {
+            root.classList.add('hidden');
+            return;
+        }
+
+        root.classList.remove('hidden');
+    };}

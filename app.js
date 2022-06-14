@@ -1,17 +1,41 @@
-// import utilities
+import createPollMenu from './PollMenu.js';
+import createNewPoll from './NewPoll.js';
+import createPolls from './polls.js';
+import trackVotes from './voteTracker.js';
 
-// import component creators
+import state, { newPoll, votes, removes, submit } from './state.js';
 
-// import state and dispatch functions
+const PollMenu = createPollMenu(document.querySelector('#poll-menu'));
 
-// Create each component: 
-// - pass in the root element via querySelector
-// - pass any needed handler functions as properties of an actions object 
+const voteTracker = trackVotes(document.querySelector('#poll-inputs'), {
+    handleVotes: (option) => {
+        votes(option);
+        display();
+    },
+    handleRemoves: (option) => {
+        removes(option);
+        display();
+    },
+    handleSubmit: () => {
+        submit();
+        display();
+    }
+});
 
-// Roll-up display function that renders (calls with state) each component
+const NewPoll = createNewPoll(document.querySelector('#new-poll'), {
+    handleNewPoll: (pollQuestion, optionAInput, optionBInput) => {
+        newPoll(pollQuestion, optionAInput, optionBInput);
+        display();
+    }
+});
+
+const Polls = createPolls(document.querySelector('.all-polls'));
+
 function display() {
-    // Call each component passing in props that are the pieces of state this component needs
+    PollMenu({ poll: state.poll });
+    voteTracker({ poll: state.poll });
+    NewPoll({ poll: state.poll });
+    Polls({ polls: state.data });
 }
 
-// Call display on page load
 display();

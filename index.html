@@ -19,20 +19,36 @@
     </header>
 
     <main>
-        <section id="start-poll">
-            <button id="start-poll-button">Start Poll</button>
+    <section id="current-poll">
+        <section id="new-poll">
+            <form>
+            <input required name="pollQuestion" id="poll-question" placeholder="Your Question">
+            <input required name="optionA" id="option-a" placeholder="Response A">
+            <input required name="optionB" id="option-b" placeholder="Response B">
+            <button id="start-poll">Start Poll</button>
+            </form>
         </section>
+            
+            
+            <section id="poll-menu">
+            
+            </form>
+
+        </section>
+
         <section id="poll-inputs">
-                <input required name="pollQuestion" id="poll-question" placeholder="Your Question">
-                <input required name="optionA" id="option-a" placeholder="Response">
-                <input required name="optionB" id="option-b" placeholder="Response">
+                <span class ="option a">A</span>
                 <button class="vote A">+</button>
                 <button class="remove A">-</button>
+                <span class ="option b">B</span>
                 <button class="vote B">+</button>
                 <button class="remove B">-</button>
                 <button id="submit-data">Submit Data</button>
         </section>
         <section id="all-data">
+            <div class ="all-polls">
+
+            </div>
 
         </section>
 

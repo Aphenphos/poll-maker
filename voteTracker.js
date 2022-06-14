@@ -1,10 +1,10 @@
-export function trackVotes(root, dispatch) {
+export default function trackVotes(root, dispatch) {
     const handleVotes = dispatch.handleVotes;
     const handleRemoves = dispatch.handleRemoves;
     const handleSubmitData = dispatch.handleSubmitData;
 
 
-    const [pollQuestionDisplay, optionADisplay, optionBDisplay] = root.querySelectorALl('pollContainer');
+    const [pollQuestionDisplay, optionADisplay, optionBDisplay] = root.querySelectorAll('span');
     const [voteA, removeA, voteB, removeB, submitData] = root.querySelectorAll('button');
 
     voteA.addEventListener('click', () => {
@@ -31,8 +31,8 @@ export function trackVotes(root, dispatch) {
         }
 
         root.classList.remove('hidden');
-        pollQuestionDisplay.textContent = poll.question.name;
-        optionADisplay.textContent = poll.optionA.name;
-        optionBDisplay.textContent = poll.optionB.name;
+        pollQuestionDisplay.textContent = poll.question;
+        optionADisplay.textContent = poll.optionA;
+        optionBDisplay.textContent = poll.optionB;
     };
 }

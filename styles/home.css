@@ -1,4 +1,8 @@
 /* CSS for home page (index.html) */
+main {
+    grid-template-rows: 360px;
+}
+
 #start-poll {
     display: flex;
     width: 100%;
@@ -14,41 +18,3 @@
 ::placeholder {
     text-align: center;
 }
-
-#poll-inputs {
-    display: grid;
-    grid-template-areas: 
-    'pollQuestion'
-    'optionA optionB'
-    'vote-A remove-A vote-B remove-B'
-    ;
-}
-
-#poll-question {
-    grid-area: pollQuestion;
-}
-
-#option-a {
-    grid-area: optionA
-}
-
-#option-b {
-    grid-area: optionB
-}
-
-#vote-a {
-    grid-area: vote-a
-}
-
-#remove-a {
-    grid-area: remove-a
-}
-
-#vote-b {
-    grid-area: vote-b
-}
-
-#remove-b {
-    grid-area: remove-b
-}
-
