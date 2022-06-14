@@ -1,4 +1,4 @@
-function createNewPoll(){
+export function createNewPoll(){
 
     const handleNewPoll = handlers.handleNewPoll;
 

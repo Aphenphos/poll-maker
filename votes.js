@@ -1,4 +1,4 @@
-function trackVotes(root, dispatch) {
+export function trackVotes(root, dispatch) {
     const handleVotes = dispatch.handleVotes;
     const handleRemoves = dispatch.handleRemoves;
     const handleSubmitData = dispatch.handleSubmitData;
@@ -18,7 +18,8 @@ function trackVotes(root, dispatch) {
     });
     removeB.addEventListener('click', () => {
         handleRemoves('B');
-        submitData.addEventListener('click', () => {
-            handleSubmitData(); 
-        });
-    });}
+    });
+    submitData.addEventListener('click', () => {
+        handleSubmitData(); 
+    });
+}
