@@ -6,7 +6,6 @@ export default function createPolls(root) {
     console.log(container);
     return (props) => {
         const polls = props.polls;
-        console.log(polls);
 
         for (const poll of polls) {
             const dataDisplay = DataDisplay(poll);

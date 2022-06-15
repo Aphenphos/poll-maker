@@ -1,4 +1,4 @@
-import state from "./state.js";
+import state from './state.js';
 export default function trackVotes(root, dispatch) {
     const handleVotes = dispatch.handleVotes;
     const handleRemoves = dispatch.handleRemoves;

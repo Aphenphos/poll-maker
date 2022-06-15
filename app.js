@@ -19,6 +19,7 @@ const voteTracker = trackVotes(document.querySelector('#poll-inputs'), {
     handleSubmitData: (poll) => {
         submit(poll);
         display();
+        poll = null;
     }
 });
 

@@ -37,9 +37,10 @@ main {
     grid-template-rows: 1fr 1fr 1fr;
     display: grid;
     grid-template-areas: 
-    'poll-question poll-question'
+    'poll-question poll-question poll-question'
     'optionADisplay optionBDisplay'
     'optionAvotes optionBvotes';
+    max-width: 400px;
 }
 
 .poll-question {
