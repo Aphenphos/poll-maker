@@ -16,7 +16,9 @@ export default function createNewPoll(root, handlers){
 
         if (poll) {
             root.classList.add('hidden');
+            console.log(root);
             return;
+   
         }
 
         root.classList.remove('hidden');

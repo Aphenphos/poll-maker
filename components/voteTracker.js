@@ -3,7 +3,6 @@ export default function trackVotes(root, dispatch) {
     const handleVotes = dispatch.handleVotes;
     const handleRemoves = dispatch.handleRemoves;
     const handleSubmitData = dispatch.handleSubmitData;
-console.log(state)
 
     const [pollQuestionDisplay, optionADisplay, optionBDisplay] = root.querySelectorAll('span');
     const [voteA, removeA, voteB, removeB, submitData] = root.querySelectorAll('button');
@@ -31,7 +30,6 @@ console.log(state)
             root.classList.add('hidden');
             return;
         }
-        console.log(pollQuestionDisplay);
         root.classList.remove('hidden');
         pollQuestionDisplay.textContent = poll.pollQuestion;
         optionADisplay.textContent = poll.optionA.name;

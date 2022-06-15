@@ -12,6 +12,7 @@ initialize();
 export default state;
 
 export function newPoll(pollQuestion, optionAInput, optionBInput) {
+    state.poll = null;
     state.poll = {
         pollQuestion: pollQuestion,
         optionA: { name: optionAInput, votes: 0 },

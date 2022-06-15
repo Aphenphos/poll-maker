@@ -30,12 +30,16 @@ main {
 }
 
 .old-data-container {
+    justify-content: center;
+    text-align: center;
     border: 1px solid black;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     display: grid;
-    grid-area: 
-    'poll-question'
+    grid-template-areas: 
+    'poll-question poll-question'
     'optionADisplay optionBDisplay'
-    'optionAvotes optionBvotes'
+    'optionAvotes optionBvotes';
 }
 
 .poll-question {
@@ -60,13 +64,18 @@ main {
     display: flex;
     justify-content: center;
 }
+.hidden {
+    display: none !important;
+}
 
 .data-container {
     display: grid;
-    grid-area: 
-    'poll-question'
-    'optionADisplay optionBDisplay'
-    'optionAvotes optionBvotes';
     justify-content: center;
     text-align: center;
+    font-size: 1em;
+}
+
+#poll-inputs {
+    display: flex;
+    justify-content: center;
 }
