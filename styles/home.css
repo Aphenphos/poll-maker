@@ -1,1 +1,134 @@
 /* CSS for home page (index.html) */
+main {
+    grid-template-rows: 360px;
+}
+
+#start-poll {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#start-poll-button {
+    height: 3em;
+    width: 75%;
+}
+
+#poll-inputs {
+    font-size: 2rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'pollQuestionDisplay pollQuestionDisplay pollQuestionDisplay pollQuestionDisplay'
+    'optionA optionA optionB optionB'
+    'voteA removeA voteB removeB'
+    'submitData submitData submitData submitData'
+}
+
+.poll-question-display {
+    grid-area: pollQuestionDisplay;
+}
+
+.option-a {
+    grid-area: optionA;
+}
+
+.option-b {
+    grid-area: optionB;
+}
+
+.vote-A {
+    grid-area: voteA;
+}
+
+.remove-A {
+    grid-area: removeA;
+}
+
+.vote-B {
+    grid-area: voteB;
+}
+
+.remove-B {
+    grid-area: removeB;
+}
+
+#submit-data {
+    grid-area: submitData;
+}
+
+::placeholder {
+    text-align: center;
+}
+
+.all-polls {
+    display: grid;
+    grid-gap: 6px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+.old-data-container {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'poll-question poll-question'
+    'optionADisplay optionBDisplay'
+    'optionAvotes optionBvotes';
+    max-width: 400px;
+}
+
+.poll-question {
+    grid-area: poll-question;
+}
+.option-A-display {
+    grid-area: optionADisplay;
+}
+
+.option-B-display {
+    grid-area: optionBDisplay;
+}
+
+.option-A-votes{
+    grid-area: optionAvotes;
+}
+
+.option-B-votes{
+    grid-area: optionBvotes;
+}
+#new-poll {
+    display: flex;
+    justify-content: center;
+}
+.hidden {
+    display: none !important;
+}
+
+.data-container {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'poll-question poll-question'
+    'optionADisplay optionBDisplay'
+    'optionAvotes optionBvotes';
+}
