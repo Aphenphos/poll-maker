@@ -18,8 +18,8 @@ const voteTracker = trackVotes(document.querySelector('#poll-inputs'), {
     },
     handleSubmitData: (poll) => {
         submit(poll);
-        display();
         poll = null;
+        display();
     }
 });
 
@@ -37,6 +37,7 @@ function display() {
     voteTracker({ poll: state.poll });
     NewPoll({ poll: state.poll });
     Polls({ polls: state.data });
+    console.log(state.data);
 }
 
 display();

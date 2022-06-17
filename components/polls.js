@@ -6,7 +6,7 @@ export default function createPolls(root) {
     console.log(container);
     return (props) => {
         const polls = props.polls;
-
+        container.innerHTML = '';
         for (const poll of polls) {
             const dataDisplay = DataDisplay(poll);
             dataDisplay.classList.replace('data-container', 'old-data-container');
